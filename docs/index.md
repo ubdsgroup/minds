@@ -17,23 +17,3 @@ Figure below illustrates the MINDS system applied to real network traffic data. 
 
 > The University of Minnesota network security analysts has been using MINDS successfully to detect novel intrusions that could not be identified using state-of-the-art signature-based tools such as SNORT. Many of these attacks detected by MINDS, have already been on the CERT/CC list of recent advisories and incident notes. In the absence of manual screening of incoming network connections, it is not possible to provide any estimate of MINDS's detection rate (i.e. the fraction of attacks that are identified by MINDS as anomalous). However, nearly all connections that are ranked highly by our anomaly detection algorithms are found to be interesting and anomalous by the network security analyst on our team. Summarization of anomalous connections using association pattern analysis has been very helpful in understanding nature of cyber attacks as well as in creating new signature rules for intrusion detection systems. 
 
-
-## People
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
