@@ -1,0 +1,43 @@
+# Copyright (c) 2009
+# 	The Regents of the University of Minnesota. All rights reserved.
+# Do not distribute.
+
+This file describes how the rule files can be used to filter the data.
+
+* Ruleset keyword can be used to combine multiple runs in one shot.  Anomaly detection is run for every subset of flows 
+corresponding to each ruleset.
+Example: Ruleset all
+
+* After a Ruleset keyword, rules can be typed in.  There are two types of rules: select, ignore.  The default action of a
+ruleset is ignore all, i.e. if no select rule applies for a given record, it's ignored.  Not all the rules have to be
+executed for every single flow record.  The action suggested by the rule (select / ignore) is applied right away when a rule
+matches the record, i.e. if a select rule matches the record, it's added to the subset even if a later ignore rule matches
+the record too.  The precedence of the rules is from top to bottom; if the first rule doesn't apply, only then the second 
+will be applied.
+
+* After a select / ignore keyword, one of the following keywords can be used.
+srcip, dstip, srcport, dstport, protocol, packets, octets, scans, p2p, hdt or all
+
+The operations that can be specified on these fields are:  >= > == != <= <  inside, outside, net_equal, net_not_equal
+The operations should be followed by values of appropriate type.  Multiple rules on one line will be interpreted as AND'ed 
+together.  "inside" and "outside" can be used provided that the boundaries of the network should be specified in the config 
+file.
+
+Here are some example rules
+ruleset example
+    ignore srcIP inside  dstIP inside
+    ignore srcIP outside dstIP outside
+    select srcport > 1024 dstport > 1024 protocol == 6
+    ignore protocol == 17
+    select srcip >= 1.1.1.0 srcip <= 1.1.1.255
+    select srcip net_equal 1.1.1.0 24
+    select srcip net_equal 1.1.1.0 255.255.255.0
+
+Last 3 lines are equivalent.
+
+In the case of 'all', the rule will match anything and the action suggested by the rule will be executed right away.  To run 
+the anomaly detection on the whole set, the rule file should look like
+
+ruleset all
+    select all
+(Indentation is optional)

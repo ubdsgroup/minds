@@ -1,0 +1,59 @@
+<!--
+The Minnesota Intrusion Detection System or MINDS is a network intrusion detection software that uses data driven anomaly detection algorithms to identify attacks on cyber infrastructure.
+
+The MINDS program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+MINDS is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+-->
+<!--
+# Copyright (c) 2018
+#       The Regents of the University of Minnesota. All rights reserved.
+-->
+
+<?xml version='1.0'?>
+<mindsconfig type="anomalydetector-config">
+<internal mask="8">100.10.10.0</internal>
+<internal mask="8">100.10.9.8</internal>
+<internal mask="8">100.1.10.0</internal>
+<internal mask="8">100.2.9.8</internal>
+<session>1</session>
+<num_threads>1</num_threads>
+<max_top>100</max_top>
+<train_size>5000</train_size>
+<test_size>0</test_size>
+<time_window>1000000</time_window>
+<conn_window>256</conn_window>
+<nn>15</nn>
+<tail_cutoff>0.1</tail_cutoff>
+<weights>
+<srcIP>1.0</srcIP>
+<dstIP>1.0</dstIP>
+<srcPort>1.0</srcPort>
+<dstPort>1.0</dstPort>
+<proto>1.0</proto>
+<duration>0.1</duration>
+<octets>0.1</octets>
+<packets>0.001</packets>
+<soctets>0.1</soctets>
+<spackets>0.1</spackets>
+<unique_inside_src_rate>0.5</unique_inside_src_rate>
+<same_src_port_rate>0.5</same_src_port_rate>
+<unique_inside_dst_rate>0.5</unique_inside_dst_rate>
+<same_dst_port_rate>0.5</same_dst_port_rate>
+<unique_inside_src_count>0.5</unique_inside_src_count>
+<same_src_port_count>0.5</same_src_port_count>
+<unique_inside_dst_count>0.5</unique_inside_dst_count>
+<same_dst_port_count>0.5</same_dst_port_count>
+</weights>
+</mindsconfig>

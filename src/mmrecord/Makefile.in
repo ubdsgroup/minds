@@ -1,0 +1,423 @@
+# Makefile.in generated automatically by automake 1.4-p6 from Makefile.am
+
+# Copyright (C) 1994, 1995-8, 1999, 2001 Free Software Foundation, Inc.
+# This Makefile.in is free software; the Free Software Foundation
+# gives unlimited permission to copy and/or distribute it,
+# with or without modifications, as long as this notice is preserved.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY, to the extent permitted by law; without
+# even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.
+
+
+SHELL = @SHELL@
+
+srcdir = @srcdir@
+top_srcdir = @top_srcdir@
+VPATH = @srcdir@
+prefix = @prefix@
+exec_prefix = @exec_prefix@
+
+bindir = @bindir@
+sbindir = @sbindir@
+libexecdir = @libexecdir@
+datadir = @datadir@
+sysconfdir = @sysconfdir@
+sharedstatedir = @sharedstatedir@
+localstatedir = @localstatedir@
+libdir = @libdir@
+infodir = @infodir@
+mandir = @mandir@
+includedir = @includedir@
+oldincludedir = /usr/include
+
+DESTDIR =
+
+pkgdatadir = $(datadir)/@PACKAGE@
+pkglibdir = $(libdir)/@PACKAGE@
+pkgincludedir = $(includedir)/@PACKAGE@
+
+top_builddir = ../..
+
+ACLOCAL = @ACLOCAL@
+AUTOCONF = @AUTOCONF@
+AUTOMAKE = @AUTOMAKE@
+AUTOHEADER = @AUTOHEADER@
+
+INSTALL = @INSTALL@
+INSTALL_PROGRAM = @INSTALL_PROGRAM@ $(AM_INSTALL_PROGRAM_FLAGS)
+INSTALL_DATA = @INSTALL_DATA@
+INSTALL_SCRIPT = @INSTALL_SCRIPT@
+transform = @program_transform_name@
+
+NORMAL_INSTALL = :
+PRE_INSTALL = :
+POST_INSTALL = :
+NORMAL_UNINSTALL = :
+PRE_UNINSTALL = :
+POST_UNINSTALL = :
+host_alias = @host_alias@
+host_triplet = @host@
+CC = @CC@
+CXX = @CXX@
+HAVE_LIB = @HAVE_LIB@
+LIB = @LIB@
+LTLIB = @LTLIB@
+MAKEINFO = @MAKEINFO@
+PACKAGE = @PACKAGE@
+RANLIB = @RANLIB@
+VERSION = @VERSION@
+
+INCLUDES = -I${includedir} -I../tcpdump-converter
+lib_LIBRARIES = libmmr.a
+bin_PROGRAMS = e2mmrecord nf2mmrecord mm_cat merge_match nfdump2mmrecord
+include_HEADERS = mm_record.h utilities.h mm_reader.h mindsconfig.h MergeMatch.h DumpRead.h
+
+EXTRA_DIST = mergematch-config.xml macros.h MergeMatch.h mindsconfig.h minds.h mm_reader.h mm_record.h nf2mmrecord.h utilities.h DumpRead.h
+
+libmmr_a_SOURCES = mm_record.cpp utilities.cpp mm_reader.cpp MergeMatch.cpp
+
+nf2mmrecord_SOURCES = nf2mmrecord.cpp flow-print.c mm_record.cpp utilities.cpp
+nf2mmrecord_LDFLAGS = -L${libdir}
+nf2mmrecord_LDADD = -lft
+e2mmrecord_SOURCES = e2mmrecord.cpp mm_record.cpp utilities.cpp
+nfdump2mmrecord_SOURCES = nfdump2mmrecord.cpp DumpRead.cpp
+mm_cat_SOURCES = mm_cat.cpp mm_record.cpp mm_reader.cpp utilities.cpp
+merge_match_SOURCES = merge_match.cpp MergeMatch.cpp mm_record.cpp mm_reader.cpp utilities.cpp
+merge_match_LDFLAGS = -L${libdir}
+merge_match_LDADD = -lxml
+mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+CONFIG_HEADER = ../../config.h
+CONFIG_CLEAN_FILES = 
+LIBRARIES =  $(lib_LIBRARIES)
+
+
+DEFS = @DEFS@ -I. -I$(srcdir) -I../..
+CPPFLAGS = @CPPFLAGS@
+LDFLAGS = @LDFLAGS@
+LIBS = @LIBS@
+libmmr_a_LIBADD = 
+libmmr_a_OBJECTS =  mm_record.o utilities.o mm_reader.o MergeMatch.o
+AR = ar
+PROGRAMS =  $(bin_PROGRAMS)
+
+e2mmrecord_OBJECTS =  e2mmrecord.o mm_record.o utilities.o
+e2mmrecord_LDADD = $(LDADD)
+e2mmrecord_DEPENDENCIES = 
+e2mmrecord_LDFLAGS = 
+nf2mmrecord_OBJECTS =  nf2mmrecord.o flow-print.o mm_record.o \
+utilities.o
+nf2mmrecord_DEPENDENCIES = 
+mm_cat_OBJECTS =  mm_cat.o mm_record.o mm_reader.o utilities.o
+mm_cat_LDADD = $(LDADD)
+mm_cat_DEPENDENCIES = 
+mm_cat_LDFLAGS = 
+merge_match_OBJECTS =  merge_match.o MergeMatch.o mm_record.o \
+mm_reader.o utilities.o
+merge_match_DEPENDENCIES = 
+nfdump2mmrecord_OBJECTS =  nfdump2mmrecord.o DumpRead.o
+nfdump2mmrecord_LDADD = $(LDADD)
+nfdump2mmrecord_DEPENDENCIES = 
+nfdump2mmrecord_LDFLAGS = 
+CXXFLAGS = @CXXFLAGS@
+CXXCOMPILE = $(CXX) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
+CXXLD = $(CXX)
+CXXLINK = $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) $(LDFLAGS) -o $@
+CFLAGS = @CFLAGS@
+COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+CCLD = $(CC)
+LINK = $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(LDFLAGS) -o $@
+HEADERS =  $(include_HEADERS)
+
+DIST_COMMON =  Makefile.am Makefile.in
+
+
+DISTFILES = $(DIST_COMMON) $(SOURCES) $(HEADERS) $(TEXINFOS) $(EXTRA_DIST)
+
+TAR = tar
+GZIP_ENV = --best
+SOURCES = $(libmmr_a_SOURCES) $(e2mmrecord_SOURCES) $(nf2mmrecord_SOURCES) $(mm_cat_SOURCES) $(merge_match_SOURCES) $(nfdump2mmrecord_SOURCES)
+OBJECTS = $(libmmr_a_OBJECTS) $(e2mmrecord_OBJECTS) $(nf2mmrecord_OBJECTS) $(mm_cat_OBJECTS) $(merge_match_OBJECTS) $(nfdump2mmrecord_OBJECTS)
+
+all: all-redirect
+.SUFFIXES:
+.SUFFIXES: .S .c .cpp .o .s
+$(srcdir)/Makefile.in: Makefile.am $(top_srcdir)/configure.ac $(ACLOCAL_M4) 
+	cd $(top_srcdir) && $(AUTOMAKE) --gnu --include-deps src/mmrecord/Makefile
+
+Makefile: $(srcdir)/Makefile.in  $(top_builddir)/config.status
+	cd $(top_builddir) \
+	  && CONFIG_FILES=$(subdir)/$@ CONFIG_HEADERS= $(SHELL) ./config.status
+
+
+mostlyclean-libLIBRARIES:
+
+clean-libLIBRARIES:
+	-test -z "$(lib_LIBRARIES)" || rm -f $(lib_LIBRARIES)
+
+distclean-libLIBRARIES:
+
+maintainer-clean-libLIBRARIES:
+
+install-libLIBRARIES: $(lib_LIBRARIES)
+	@$(NORMAL_INSTALL)
+	$(mkinstalldirs) $(DESTDIR)$(libdir)
+	@list='$(lib_LIBRARIES)'; for p in $$list; do \
+	  if test -f $$p; then \
+	    echo " $(INSTALL_DATA) $$p $(DESTDIR)$(libdir)/$$p"; \
+	    $(INSTALL_DATA) $$p $(DESTDIR)$(libdir)/$$p; \
+	  else :; fi; \
+	done
+	@$(POST_INSTALL)
+	@list='$(lib_LIBRARIES)'; for p in $$list; do \
+	  if test -f $$p; then \
+	    echo " $(RANLIB) $(DESTDIR)$(libdir)/$$p"; \
+	    $(RANLIB) $(DESTDIR)$(libdir)/$$p; \
+	  else :; fi; \
+	done
+
+uninstall-libLIBRARIES:
+	@$(NORMAL_UNINSTALL)
+	list='$(lib_LIBRARIES)'; for p in $$list; do \
+	  rm -f $(DESTDIR)$(libdir)/$$p; \
+	done
+
+.c.o:
+	$(COMPILE) -c $<
+
+.s.o:
+	$(COMPILE) -c $<
+
+.S.o:
+	$(COMPILE) -c $<
+
+mostlyclean-compile:
+	-rm -f *.o core *.core
+
+clean-compile:
+
+distclean-compile:
+	-rm -f *.tab.c
+
+maintainer-clean-compile:
+
+libmmr.a: $(libmmr_a_OBJECTS) $(libmmr_a_DEPENDENCIES)
+	-rm -f libmmr.a
+	$(AR) cru libmmr.a $(libmmr_a_OBJECTS) $(libmmr_a_LIBADD)
+	$(RANLIB) libmmr.a
+
+mostlyclean-binPROGRAMS:
+
+clean-binPROGRAMS:
+	-test -z "$(bin_PROGRAMS)" || rm -f $(bin_PROGRAMS)
+
+distclean-binPROGRAMS:
+
+maintainer-clean-binPROGRAMS:
+
+install-binPROGRAMS: $(bin_PROGRAMS)
+	@$(NORMAL_INSTALL)
+	$(mkinstalldirs) $(DESTDIR)$(bindir)
+	@list='$(bin_PROGRAMS)'; for p in $$list; do \
+	  if test -f $$p; then \
+	    echo "  $(INSTALL_PROGRAM) $$p $(DESTDIR)$(bindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`"; \
+	     $(INSTALL_PROGRAM) $$p $(DESTDIR)$(bindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`; \
+	  else :; fi; \
+	done
+
+uninstall-binPROGRAMS:
+	@$(NORMAL_UNINSTALL)
+	list='$(bin_PROGRAMS)'; for p in $$list; do \
+	  rm -f $(DESTDIR)$(bindir)/`echo $$p|sed 's/$(EXEEXT)$$//'|sed '$(transform)'|sed 's/$$/$(EXEEXT)/'`; \
+	done
+
+e2mmrecord: $(e2mmrecord_OBJECTS) $(e2mmrecord_DEPENDENCIES)
+	@rm -f e2mmrecord
+	$(CXXLINK) $(e2mmrecord_LDFLAGS) $(e2mmrecord_OBJECTS) $(e2mmrecord_LDADD) $(LIBS)
+
+nf2mmrecord: $(nf2mmrecord_OBJECTS) $(nf2mmrecord_DEPENDENCIES)
+	@rm -f nf2mmrecord
+	$(CXXLINK) $(nf2mmrecord_LDFLAGS) $(nf2mmrecord_OBJECTS) $(nf2mmrecord_LDADD) $(LIBS)
+
+mm_cat: $(mm_cat_OBJECTS) $(mm_cat_DEPENDENCIES)
+	@rm -f mm_cat
+	$(CXXLINK) $(mm_cat_LDFLAGS) $(mm_cat_OBJECTS) $(mm_cat_LDADD) $(LIBS)
+
+merge_match: $(merge_match_OBJECTS) $(merge_match_DEPENDENCIES)
+	@rm -f merge_match
+	$(CXXLINK) $(merge_match_LDFLAGS) $(merge_match_OBJECTS) $(merge_match_LDADD) $(LIBS)
+
+nfdump2mmrecord: $(nfdump2mmrecord_OBJECTS) $(nfdump2mmrecord_DEPENDENCIES)
+	@rm -f nfdump2mmrecord
+	$(CXXLINK) $(nfdump2mmrecord_LDFLAGS) $(nfdump2mmrecord_OBJECTS) $(nfdump2mmrecord_LDADD) $(LIBS)
+.cpp.o:
+	$(CXXCOMPILE) -c $<
+
+install-includeHEADERS: $(include_HEADERS)
+	@$(NORMAL_INSTALL)
+	$(mkinstalldirs) $(DESTDIR)$(includedir)
+	@list='$(include_HEADERS)'; for p in $$list; do \
+	  if test -f "$$p"; then d= ; else d="$(srcdir)/"; fi; \
+	  echo " $(INSTALL_DATA) $$d$$p $(DESTDIR)$(includedir)/$$p"; \
+	  $(INSTALL_DATA) $$d$$p $(DESTDIR)$(includedir)/$$p; \
+	done
+
+uninstall-includeHEADERS:
+	@$(NORMAL_UNINSTALL)
+	list='$(include_HEADERS)'; for p in $$list; do \
+	  rm -f $(DESTDIR)$(includedir)/$$p; \
+	done
+
+tags: TAGS
+
+ID: $(HEADERS) $(SOURCES) $(LISP)
+	list='$(SOURCES) $(HEADERS)'; \
+	unique=`for i in $$list; do echo $$i; done | \
+	  awk '    { files[$$0] = 1; } \
+	       END { for (i in files) print i; }'`; \
+	here=`pwd` && cd $(srcdir) \
+	  && mkid -f$$here/ID $$unique $(LISP)
+
+TAGS:  $(HEADERS) $(SOURCES)  $(TAGS_DEPENDENCIES) $(LISP)
+	tags=; \
+	here=`pwd`; \
+	list='$(SOURCES) $(HEADERS)'; \
+	unique=`for i in $$list; do echo $$i; done | \
+	  awk '    { files[$$0] = 1; } \
+	       END { for (i in files) print i; }'`; \
+	test -z "$(ETAGS_ARGS)$$unique$(LISP)$$tags" \
+	  || (cd $(srcdir) && etags -o $$here/TAGS $(ETAGS_ARGS) $$tags  $$unique $(LISP))
+
+mostlyclean-tags:
+
+clean-tags:
+
+distclean-tags:
+	-rm -f TAGS ID
+
+maintainer-clean-tags:
+
+distdir = $(top_builddir)/$(PACKAGE)-$(VERSION)/$(subdir)
+
+subdir = src/mmrecord
+
+distdir: $(DISTFILES)
+	@for file in $(DISTFILES); do \
+	  d=$(srcdir); \
+	  if test -d $$d/$$file; then \
+	    cp -pr $$d/$$file $(distdir)/$$file; \
+	  else \
+	    test -f $(distdir)/$$file \
+	    || ln $$d/$$file $(distdir)/$$file 2> /dev/null \
+	    || cp -p $$d/$$file $(distdir)/$$file || :; \
+	  fi; \
+	done
+DumpRead.o: DumpRead.cpp DumpRead.h mm_record.h minds.h macros.h \
+	../tcpdump-converter/eee_flows.h nf2mmrecord.h
+e2mmrecord.o: e2mmrecord.cpp ../tcpdump-converter/eee_flows.h \
+	mm_record.h minds.h macros.h nf2mmrecord.h
+flow-print.o: flow-print.c
+merge_match.o: merge_match.cpp mm_reader.h mm_record.h minds.h macros.h \
+	../tcpdump-converter/eee_flows.h nf2mmrecord.h MergeMatch.h \
+	mindsconfig.h
+MergeMatch.o: MergeMatch.cpp MergeMatch.h mm_record.h minds.h macros.h \
+	../tcpdump-converter/eee_flows.h nf2mmrecord.h mindsconfig.h
+mm_cat.o: mm_cat.cpp mm_reader.h mm_record.h minds.h macros.h \
+	../tcpdump-converter/eee_flows.h nf2mmrecord.h mindsconfig.h
+mm_reader.o: mm_reader.cpp mm_reader.h mm_record.h minds.h macros.h \
+	../tcpdump-converter/eee_flows.h nf2mmrecord.h
+mm_record.o: mm_record.cpp ../tcpdump-converter/eee_flows.h \
+	nf2mmrecord.h mm_record.h minds.h macros.h utilities.h
+nf2mmrecord.o: nf2mmrecord.cpp nf2mmrecord.h mm_record.h minds.h \
+	macros.h ../tcpdump-converter/eee_flows.h
+nfdump2mmrecord.o: nfdump2mmrecord.cpp mm_record.h minds.h macros.h \
+	../tcpdump-converter/eee_flows.h nf2mmrecord.h DumpRead.h
+utilities.o: utilities.cpp utilities.h minds.h mm_record.h macros.h \
+	../tcpdump-converter/eee_flows.h nf2mmrecord.h
+
+info-am:
+info: info-am
+dvi-am:
+dvi: dvi-am
+check-am: all-am
+check: check-am
+installcheck-am:
+installcheck: installcheck-am
+install-exec-am: install-libLIBRARIES install-binPROGRAMS
+install-exec: install-exec-am
+
+install-data-am: install-includeHEADERS
+install-data: install-data-am
+
+install-am: all-am
+	@$(MAKE) $(AM_MAKEFLAGS) install-exec-am install-data-am
+install: install-am
+uninstall-am: uninstall-libLIBRARIES uninstall-binPROGRAMS \
+		uninstall-includeHEADERS
+uninstall: uninstall-am
+all-am: Makefile $(LIBRARIES) $(PROGRAMS) $(HEADERS)
+all-redirect: all-am
+install-strip:
+	$(MAKE) $(AM_MAKEFLAGS) AM_INSTALL_PROGRAM_FLAGS=-s install
+installdirs:
+	$(mkinstalldirs)  $(DESTDIR)$(libdir) $(DESTDIR)$(bindir) \
+		$(DESTDIR)$(includedir)
+
+
+mostlyclean-generic:
+
+clean-generic:
+
+distclean-generic:
+	-rm -f Makefile $(CONFIG_CLEAN_FILES)
+	-rm -f config.cache config.log stamp-h stamp-h[0-9]*
+
+maintainer-clean-generic:
+mostlyclean-am:  mostlyclean-libLIBRARIES mostlyclean-compile \
+		mostlyclean-binPROGRAMS mostlyclean-tags \
+		mostlyclean-generic
+
+mostlyclean: mostlyclean-am
+
+clean-am:  clean-libLIBRARIES clean-compile clean-binPROGRAMS clean-tags \
+		clean-generic mostlyclean-am
+
+clean: clean-am
+
+distclean-am:  distclean-libLIBRARIES distclean-compile \
+		distclean-binPROGRAMS distclean-tags distclean-generic \
+		clean-am
+
+distclean: distclean-am
+
+maintainer-clean-am:  maintainer-clean-libLIBRARIES \
+		maintainer-clean-compile maintainer-clean-binPROGRAMS \
+		maintainer-clean-tags maintainer-clean-generic \
+		distclean-am
+	@echo "This command is intended for maintainers to use;"
+	@echo "it deletes files that may require special tools to rebuild."
+
+maintainer-clean: maintainer-clean-am
+
+.PHONY: mostlyclean-libLIBRARIES distclean-libLIBRARIES \
+clean-libLIBRARIES maintainer-clean-libLIBRARIES uninstall-libLIBRARIES \
+install-libLIBRARIES mostlyclean-compile distclean-compile \
+clean-compile maintainer-clean-compile mostlyclean-binPROGRAMS \
+distclean-binPROGRAMS clean-binPROGRAMS maintainer-clean-binPROGRAMS \
+uninstall-binPROGRAMS install-binPROGRAMS uninstall-includeHEADERS \
+install-includeHEADERS tags mostlyclean-tags distclean-tags clean-tags \
+maintainer-clean-tags distdir info-am info dvi-am dvi check check-am \
+installcheck-am installcheck install-exec-am install-exec \
+install-data-am install-data install-am install uninstall-am uninstall \
+all-redirect all-am all installdirs mostlyclean-generic \
+distclean-generic clean-generic maintainer-clean-generic clean \
+mostlyclean distclean maintainer-clean
+
+
+install:
+	cp -f mergematch-config.xml ${sysconfdir}/cfg
+
+# Tell versions [3.59,3.63) of GNU make to not export all variables.
+# Otherwise a system limit (for SysV at least) may be exceeded.
+.NOEXPORT:

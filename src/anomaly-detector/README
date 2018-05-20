@@ -1,0 +1,29 @@
+# Copyright (c) 2009
+# 	The Regents of the University of Minnesota. All rights reserved.
+# Do not distribute.
+
+This is the tcpdump version of MINDS.  This reads in a tcpdump file, and
+begins processing once the entire file is read in.  The basic usage is
+
+minds minds.config minds.rules output_file_name input_tcpdump_file
+training_prefix num_threads
+
+minds.config is the configuraiton file, which specifies the parameters to be
+used in the run
+
+minds.rules is the rules file specifying anything to be ignored, and how to
+partition the data (if desired).  The minds.rules file included breaks the
+data into tcp, udp, icmp, ipsec and other.
+
+output_file_name is the prefix that will be used for the output filenames.
+
+input_tcpdump_file is the tcpdump file that will be used for this run
+
+num_threads This is the number of threads to be used for the anomaly
+detection core.  If you have a single processor computer just set this to 1,
+if you have a multi processor computer (or a pentium 4/xeon with
+hyper threading) set this to the number of cpus or cores.
+
+Documentation on the config and rules files can be found in the other README
+files in this directory.
+

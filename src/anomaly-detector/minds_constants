@@ -1,0 +1,8 @@
+unsigned char IPSWEEP_TIME_WINDOW   = 0x01;
+unsigned char IPSWEEP_CONN_WINDOW   = 0x02;
+unsigned char PORTSWEEP_TIME_WINDOW = 0x04;
+unsigned char PORTSWEEP_CONN_WINDOW = 0x08;
+
+unsigned long TIMEOUT  = 86400*3; // three days
+unsigned char MASK_CAP = 24;
+

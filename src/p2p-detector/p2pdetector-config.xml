@@ -1,0 +1,94 @@
+<!--
+The Minnesota Intrusion Detection System or MINDS is a network intrusion detection software that uses data driven anomaly detection algorithms to identify attacks on cyber infrastructure.
+
+The MINDS program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or
+(at your option) any later version.
+
+MINDS is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+-->
+<!--
+# Copyright (c) 2018
+#       The Regents of the University of Minnesota. All rights reserved.
+-->
+
+<?xml version='1.0'?>
+<mindsconfig type="p2pdetector-config">
+<print_p2p_details>1</print_p2p_details>
+<p2p_success_threshold>50</p2p_success_threshold>
+<p2p_wellknown_threshold>1</p2p_wellknown_threshold>
+<p2p_minflow_threshold>10</p2p_minflow_threshold>
+<p2p_min_connected_ips>20</p2p_min_connected_ips>
+<port type="p2p_port">4661</port>
+<port type="p2p_port">4662</port>
+<port type="p2p_port">4665</port>
+<port type="p2p_port">1214</port>
+<port type="p2p_port">6346</port>
+<port type="p2p_port">6347</port>
+<port type="p2p_port">412</port>
+<port type="p2p_port">411</port>
+<port type="p2p_port">41170</port>
+<port type="p2p_port">6881</port>
+<port type="p2p_port">6882</port>
+<port type="p2p_port">6883</port>
+<port type="p2p_port">6884</port>
+<port type="p2p_port">6885</port>
+<port type="p2p_port">6886</port>
+<port type="p2p_port">6887</port>
+<port type="p2p_port">6888</port>
+<port type="p2p_port">6889</port>
+<port type="p2p_port">6699</port>
+<port type="p2p_port">6257</port>
+<port type="p2p_port">2234</port>
+<port type="malware">3127</port>
+<port type="malware">3128</port>
+<port type="malware">1433</port>
+<port type="malware">1434</port>
+<port type="malware">1080</port>
+<port type="malware">10080</port>
+<port type="malware">17300</port>
+<port type="malware">6129</port>
+<port type="malware">27015</port>
+<port type="malware">27016</port>
+<port type="malware">901</port>
+<port type="malware">2745</port>
+<port type="good_tcp_udp">135</port>
+<port type="good_tcp_udp">137</port>
+<port type="good_tcp_udp">139</port>
+<port type="good_tcp_udp">445</port>
+<port type="good_tcp_udp">53</port>
+<port type="good_tcp_udp">123</port>
+<port type="good_tcp_udp">500</port>
+<port type="good_tcp_udp">554</port>
+<port type="good_tcp_udp">7070</port>
+<port type="good_tcp_udp">1755</port>
+<port type="good_tcp_udp">6970</port>
+<port type="good_tcp_udp">5000</port>
+<port type="good_tcp_udp">5001</port>
+<port type="good_tcp_udp">7000</port>
+<port type="good_tcp_udp">7514</port>
+<port type="good_tcp_udp">6667</port>
+<port type="good_tcp_udp">6112</port>
+<port type="good_tcp_udp">6868</port>
+<port type="good_tcp_udp">6899</port>
+<port type="good_tcp_udp">3531</port>
+<port type="good_port">20</port>
+<port type="good_port">21</port>
+<port type="good_port">22</port>
+<port type="good_port">25</port>
+<port type="good_port">53</port>
+<port type="good_port">80</port>
+<port type="good_port">110</port>
+<port type="good_port">113</port>
+<port type="good_port">143</port>
+<port type="good_port">443</port>
+</mindsconfig>

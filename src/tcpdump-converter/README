@@ -1,0 +1,40 @@
+# Copyright (c) 2005
+#       The Regents of the University of Minnesota. All rights reserved.
+# Do not distribute.
+
+Flow collector was written by Eric Eilertson, eric@cs.umn.edu, please send
+questions or comments there.
+
+Flow collector can be used to listen to a network interface, or read a
+tcpdump file and create records similar to netflows.  Netflows can't be
+duplicate exactly from only tcpdump since AS number information as such
+is not available, but this will give insight into traffic patterns.
+
+The heuristics for building sessions are just that, they do not follow
+the network definition for a session, and I build sessions where they do
+not exist by definition, i.e. udp.  I do this to try and capture the
+intent of the packets, and grouping related packets together.  
+
+The usage is simple, collector collector.config.  The config file has 
+just a few paramaters 
+
+interface is used to state which network interface should be listened 
+too.  This will usually require root permissions.
+
+tcpdumpfile is used to indicate which tcpdumpfile should be read.
+
+outfile is the prefix of the output file.  This is appended with the 
+time window for that run. 
+
+file_close_time is used to indicate how often one flow file should be 
+closed and another started.  It should be noted, that just because the 
+time for a file to be closed has passed does not mean the file will be 
+closed.  This only happens once a flow has been closed during the time 
+window.
+
+num_packets_cleanup defines how often memory management is to be 
+performed.  This is actually used for each packet type, i.e. tcp, udp, 
+ipsec.  So a value of 100000 might be best for tcp, but this will let 
+ipsec sessions linger in memory for quite a while before being written.
+
+
