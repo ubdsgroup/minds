@@ -4,6 +4,7 @@ Repository Maintained by:
 - Varun Chandola
 - chandola@buffalo.edu
 
+Full details available [here](https://ubdsgroup.github.io/minds/).
 
 For detailed installation and operation instructions, refer to [MINDS manual](docs/minds_manual.pdf).
 ### To install flows-tools:
