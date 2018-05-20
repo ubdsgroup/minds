@@ -5,7 +5,7 @@ Repository Maintained by:
 - chandola@buffalo.edu
 
 
-For detailed installation and operation instructions, refer to [MINDS manual](tree/docs/manual.pdf).
+For detailed installation and operation instructions, refer to [MINDS manual](docs/minds_manual.pdf).
 ### To install flows-tools:
 cd $MINDSDIR/src
 tar -zxvf flow-tools-0.68.2-rc5.tar.gz
