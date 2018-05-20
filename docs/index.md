@@ -18,68 +18,13 @@ Figure below illustrates the MINDS system applied to real network traffic data. 
 > The University of Minnesota network security analysts has been using MINDS successfully to detect novel intrusions that could not be identified using state-of-the-art signature-based tools such as SNORT. Many of these attacks detected by MINDS, have already been on the CERT/CC list of recent advisories and incident notes. In the absence of manual screening of incoming network connections, it is not possible to provide any estimate of MINDS's detection rate (i.e. the fraction of attacks that are identified by MINDS as anomalous). However, nearly all connections that are ranked highly by our anomaly detection algorithms are found to be interesting and anomalous by the network security analyst on our team. Summarization of anomalous connections using association pattern analysis has been very helpful in understanding nature of cyber attacks as well as in creating new signature rules for intrusion detection systems. 
 
 
-#### People 
-
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-
-##### Header 5
-
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
-
-###### Header 6
-
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
-
-### There's a horizontal rule below this.
-
-* * *
-
-### Here is an unordered list:
+## People
 
 *   Item foo
 *   Item bar
 *   Item baz
 *   Item zip
 
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![Octocat](https://assets-cdn.github.com/images/icons/emoji/octocat.png)
-
-
-
-### Definition lists can be used with HTML syntax.
 
 <dl>
 <dt>Name</dt>
@@ -92,10 +37,3 @@ Figure below illustrates the MINDS system applied to real network traffic data. 
 <dd>Green</dd>
 </dl>
 
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
-
-```
-The final element.
-```
